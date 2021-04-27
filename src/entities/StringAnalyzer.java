@@ -21,11 +21,18 @@ public class StringAnalyzer {
         return charPercentage;
     }
 
+    private double getTruncatedDecimals(double value){
+        value = value * Math.pow(10,3);
+        value = Math.floor(value);
+        value = value / Math.pow(10,3);
+        return value;
+    }
+
     private void setCharsPercentage(){
         for (Map.Entry<Character,Integer> entry : charAmount.entrySet()){
             char key = entry.getKey();
             int value = entry.getValue();
-            charPercentage.put(key, (double) value/cadenaLength);
+            charPercentage.put(key, getTruncatedDecimals((double) value/cadenaLength));
         }
     }
 
@@ -47,6 +54,22 @@ public class StringAnalyzer {
                 charAmount.put(cadena.charAt(i),actualCharAmount + 1);
             }
         }
+    }
+
+    public double getEntropia(){
+
+        double entropia = 0;
+
+        for(Map.Entry<Character,Double> entry : charPercentage.entrySet()){
+
+            char key = entry.getKey();
+            double value = entry.getValue();
+            int charCount = charAmount.get(key);
+
+            entropia += value * (Math.log10(cadenaLength/charCount) / Math.log10(2));
+        }
+
+        return entropia;
     }
 
     public int getStringLength(){

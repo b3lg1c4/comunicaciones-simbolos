@@ -29,5 +29,7 @@ public class Menu {
         System.out.println(ConsoleColors.BLUE + sra.getCharAmount() + ConsoleColors.RESET);
         System.out.print(ConsoleColors.BLUE_BOLD +  "P(a) -> " + ConsoleColors.RESET);
         System.out.println(ConsoleColors.BLUE + sra.getCharPercentage() + ConsoleColors.RESET);
+        System.out.print(ConsoleColors.BLUE_BOLD +  "H(s) -> " + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLUE + sra.getEntropia() + ConsoleColors.RESET);
     }
 }
