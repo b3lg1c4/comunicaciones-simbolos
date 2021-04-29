@@ -26,7 +26,7 @@ public class Menu {
         System.out.print(ConsoleColors.BLUE_BOLD + "Cadena ingresada -> " + ConsoleColors.RESET);
         System.out.println(ConsoleColors.BLUE + sra.getCadena() + ConsoleColors.RESET);
         System.out.print(ConsoleColors.BLUE_BOLD +  "Contador de símbolos -> " + ConsoleColors.RESET);
-        System.out.println(ConsoleColors.BLUE + sra.getCharAmount() + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLUE + sra.getCharAmount()+" - "+"TOTAL: "+ sra.getStringLength() + ConsoleColors.RESET);
         System.out.print(ConsoleColors.BLUE_BOLD +  "P(a) -> " + ConsoleColors.RESET);
         System.out.println(ConsoleColors.BLUE + sra.getCharPercentage() + ConsoleColors.RESET);
         System.out.print(ConsoleColors.BLUE_BOLD +  "H(s) -> " + ConsoleColors.RESET);
